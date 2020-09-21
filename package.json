@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ddwebdevv/ddstories.git"
+    "url": "git+https://github.com/ddwebdevv/portfolio.git"
   },
   "author": "Dmitry Dergunov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ddwebdevv/ddstories/issues"
+    "url": "https://github.com/ddwebdevv/portfolio.git/issues"
   },
-  "homepage": "https://github.com/ddwebdevv/ddstories#readme",
+  "homepage": "https://github.com/ddwebdevv/portfolio.git#readme",
   "dependencies": {
     "bootstrap": "^4.5.2",
     "bootstrap-social": "^5.1.1",
