@@ -35,7 +35,6 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "onchange": "^7.0.2"
+    "node-sass": "^4.14.1"
   }
 }
