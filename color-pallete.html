@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template</title>
+	<!-- change icon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/color-pallete.css">
+</head>
+<body>
+    <div class="container mt-5" >
+        <div class="row">
+            <div class="col-sm-6 m-auto">
+                <form>
+                    <div class="row form-group">
+                        <label class="col-sm-6 col-form-label" for="numColors">Numbers of Colors</label>
+                        <div class="col">
+                            <select class="form-control" name="numColors" id="numColors">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-6 col-form-label" for="numShades">Numbers of Shades</label>
+                        <div class="col">
+                            <select class="form-control" name="numShades" id="numShades">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary m-auto" id="generate">Generate</button>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="countColors">
+        <div class="row justify-content-center ">
+            <div class="col-sm-6" >
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="color" name="colorMain" class="round" value="#00ff00" />                
+            </div>
+        </div>                 
+    </div>
+
+    <div class="container">
+        <div class="row  justify-content-center">
+            <div class="col">
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="text" readonly value="#444444">
+            </div>
+            <div class="col">
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="text" readonly value="#444444">
+            </div>
+            <div class="col">
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="text" readonly value="#444444">
+            </div>
+            <div class="col">
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="text" readonly value="#444444">
+            </div>
+            <div class="col">
+                <input type="color" name="colorMain" class="round" value="#00ff00" />
+                <input type="text" readonly value="#444444">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/color-pallete.js"></script>
+</body>
+</html>

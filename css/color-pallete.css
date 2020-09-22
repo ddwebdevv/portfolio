@@ -1,0 +1,19 @@
+:root{
+    --base: #0000ff;
+}
+
+.round {
+    
+    border: none;
+    width: 6rem;
+    height: 6rem;
+}
+
+.row {
+    margin: 0.5rem;
+}
+
+input[type=text] {
+    width: 6rem;
+    text-align: center;
+}

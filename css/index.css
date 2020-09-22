@@ -27,12 +27,23 @@ hr {
 
 .btn-primary {
   background-color: #f05f44;
-  border-color: #f05f44; }
+  border-color: #f05f44;
+  box-shadow: 0 0.25rem #3f18118e; }
 
 .btn-primary:hover {
   background-color: #f05f44;
   border-color: #f05f44;
-  border-width: 4px; }
+  filter: brightness(110%); }
+
+.btn-primary:active {
+  transform: translate(0, 0.25rem);
+  box-shadow: 0 0.1rem #3f18118e;
+  background-color: #f05f44;
+  border-color: #f05f44; }
+
+.btn-primary:active {
+  background-color: #f05f44;
+  border-color: #f05f44; }
 
 .btn-xl {
   padding: 1rem 2rem; }

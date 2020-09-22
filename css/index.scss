@@ -1,5 +1,5 @@
 $color-main: #f05f44;
-
+$color-shadow: #3f18118e;
 
 body, html {
 	width: 100%;
@@ -37,13 +37,22 @@ hr {
 .btn-primary {
 	background-color: $color-main;
 	border-color: $color-main;
+	box-shadow: 0 0.25rem $color-shadow;
 }
 
 .btn-primary:hover {
 	background-color: $color-main;
 	border-color: $color-main;
-	border-width: 4px;
+	filter: brightness(110%);
 }
+
+.btn-primary:active {
+	transform: translate(0, 0.25rem);
+	box-shadow: 0 0.1rem $color-shadow;
+	background-color: $color-main;
+	border-color: $color-main;
+}
+
 
 .btn-xl {
 	padding: 1rem 2rem;

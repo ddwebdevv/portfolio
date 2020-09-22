@@ -1,22 +1,2 @@
 h2 {
-	color:red;
-	/*text-align: center;*/
-	font-size: 4rem;
-}
-
-/*div {
-	border: 1px solid green;
-}*/
-
-.site-footer {
-  background-image: linear-gradient(#CEC8FF, white);
-}
-
-.alcen {
-	text-align: center;
-}
-
-.textright {
-	display: block; 
-	text-align: right;
-}
+  border-color: blue; }
