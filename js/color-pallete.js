@@ -49,23 +49,50 @@ function generate() {
 
 function colorizeInit(){
     console.log('init');
-    if (document.querySelector('#sameColor').checked) {
-        console.log("checked");
+
+    if (document.querySelector('#sameColorChild').checked && !document.querySelector('#sameColorParent').checked)  {
         inputArr.forEach(input => { 
+            input.removeEventListener('change', colorizeAllparent);
+            input.removeEventListener('input', colorizeAllparent);
+            input.removeEventListener('change', colorizeAll);
+            input.removeEventListener('input', colorizeAll);
             input.removeEventListener('change', colorizeSingle);
             input.removeEventListener('input', colorizeSingle);
             input.addEventListener('change', colorizeAllchild);
             input.addEventListener('input', colorizeAllchild);
-            // input.value = input.parentNode.style.backgroundColor;
         });
-    } else {
-        console.log('not checked');
-        inputArr.forEach(input => { 
+    } else if (document.querySelector('#sameColorChild').checked && document.querySelector('#sameColorParent').checked) {
+        inputArr.forEach(input => {             
+            input.removeEventListener('change', colorizeAllparent);
+            input.removeEventListener('input', colorizeAllparent);
             input.removeEventListener('change', colorizeAllchild);
             input.removeEventListener('input', colorizeAllchild);
+            input.removeEventListener('change', colorizeSingle);
+            input.removeEventListener('input', colorizeSingle);
+            input.addEventListener('change', colorizeAll);
+            input.addEventListener('input', colorizeAll);
+        });
+    } else if (!document.querySelector('#sameColorChild').checked && document.querySelector('#sameColorParent').checked){
+        inputArr.forEach(input => {             
+            input.removeEventListener('change', colorizeAll);
+            input.removeEventListener('input', colorizeAll);
+            input.removeEventListener('change', colorizeAllchild);
+            input.removeEventListener('input', colorizeAllchild);
+            input.removeEventListener('change', colorizeSingle);
+            input.removeEventListener('input', colorizeSingle);
+            input.addEventListener('change', colorizeAllparent);
+            input.addEventListener('input', colorizeAllparent);
+        });
+    }else if (!document.querySelector('#sameColorChild').checked && !document.querySelector('#sameColorParent').checked) {
+        inputArr.forEach(input => {             
+            input.removeEventListener('change', colorizeAllparent);
+            input.removeEventListener('input', colorizeAllparent);
+            input.removeEventListener('change', colorizeAllchild);
+            input.removeEventListener('input', colorizeAllchild);
+            input.removeEventListener('change', colorizeAll);
+            input.removeEventListener('input', colorizeAll);
             input.addEventListener('change', colorizeSingle);
             input.addEventListener('input', colorizeSingle);
-            // input.value = input.parentNode.style.backgroundColor;
         });
     }
 }
@@ -97,18 +124,58 @@ function colorize(target, color) {
 }
 
 function colorizeAllchild(e){
-    console.log(e.target.dataset.colorn);
-    console.log(e.target.dataset.indexn);
-    console.log(inputArr[3].dataset.colorn);
+    // console.log(e.target.dataset.colorn);
+    // console.log(e.target.dataset.indexn);
+    // console.log(inputArr[3].dataset.colorn);
     // const index = inputArr.findIndex(e);
-    // console.log(index);
-    
+    // console.log(index);    
     const current = array.filter( function(input) {
         if (input.dataset.colorn === e.target.dataset.colorn && input.dataset.indexn >= e.target.dataset.indexn) {
             return true;
         }
+    });    
+    console.log('look here' + current);
+    console.log(current);
+    current.forEach(item => {
+        console.log(e.target.style.color);
+        console.log(e.target.value);
+
+        colorize(item, e.target.value);
     });
-    
+}
+
+function colorizeAllparent(e){
+    // console.log(e.target.dataset.colorn);
+    // console.log(e.target.dataset.indexn);
+    // console.log(inputArr[3].dataset.colorn);
+    // const index = inputArr.findIndex(e);
+    // console.log(index);    
+    const current = array.filter( function(input) {
+        if (input.dataset.colorn === e.target.dataset.colorn && input.dataset.indexn <= e.target.dataset.indexn) {
+            return true;
+        }
+    });    
+    console.log('look here' + current);
+    console.log(current);
+    current.forEach(item => {
+        console.log(e.target.style.color);
+        console.log(e.target.value);
+
+        colorize(item, e.target.value);
+    });
+}
+
+function colorizeAll(e){
+    // console.log(e.target.dataset.colorn);
+    // console.log(e.target.dataset.indexn);
+    // console.log(inputArr[3].dataset.colorn);
+    // const index = inputArr.findIndex(e);
+    // console.log(index);    
+    const current = array.filter( function(input) {
+        if (input.dataset.colorn === e.target.dataset.colorn) {
+            return true;
+        }
+    });    
     console.log('look here' + current);
     console.log(current);
     current.forEach(item => {
@@ -122,6 +189,6 @@ function colorizeAllchild(e){
 // inputArr[1].style.backgroundColor = '#ff0000';
 // numCol, numShad
 
-
-document.querySelector('#sameColor').addEventListener('change', colorizeInit);
+document.querySelector('#sameColorParent').addEventListener('change', colorizeInit);
+document.querySelector('#sameColorChild').addEventListener('change', colorizeInit);
 document.querySelector('#generate').addEventListener('click', generate);

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/color-pallete.css">
 </head>
 <body>
-    <div class="container mt-sm-5 " >
+    <div class="container mt-sm-3 " >
                 <form>
                     <div class="row form-group d-flex justify-content-center">
                         <label class="col-sm-4 col-form-label" for="numColors">Numbers of Colors</label>
@@ -37,9 +37,13 @@
                     <div class="row form-group d-flex">
                         <div class="col  text-center">
                             <button type="button" class="btn btn-secondary m-auto" id="generate">Generate</button>
-                            <label for="sameColor" class="mt-1 ml-2 col-form-label">
-                                <input type="checkbox" id="sameColor" name="sameColor" checked/>
+                            <label for="sameColorChild" class="mt-1 ml-2 col-form-label">
+                                <input type="checkbox" id="sameColorChild" name="sameColorChild" checked/>
                                 All child colors have same color as parent
+                            </label>
+                            <label for="sameColorParent" class="mt-1 ml-2 col-form-label">
+                                <input type="checkbox" id="sameColorParent" name="sameColorParent" checked/>
+                                All parent colors have same color as child
                             </label>
                             <span>(click 3 times to highlight color value)</span>
                         </div>
