@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="css/color-pallete.css">
 </head>
 <body>
-    <div class="container mt-5" >
-        <div class="row">
-            <div class="col-sm-6 m-auto">
+    <div class="container mt-sm-5 " >
                 <form>
-                    <div class="row form-group">
-                        <label class="col-sm-6 col-form-label" for="numColors">Numbers of Colors</label>
-                        <div class="col">
+                    <div class="row form-group d-flex justify-content-center">
+                        <label class="col-sm-4 col-form-label" for="numColors">Numbers of Colors</label>
+                        <div class="col-4">
                             <select class="form-control" name="numColors" id="numColors">
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -25,9 +23,9 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row form-group">
-                        <label class="col-sm-6 col-form-label" for="numShades">Numbers of Shades</label>
-                        <div class="col">
+                    <div class="row form-group d-flex justify-content-center">
+                        <label class="col-sm-4 col-form-label" for="numShades">Numbers of Shades</label>
+                        <div class="col-4">
                             <select class="form-control" name="numShades" id="numShades">
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -36,18 +34,18 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row form-group">
-                        <div class="col input-group-text">
+                    <div class="row form-group d-flex">
+                        <div class="col  text-center">
                             <button type="button" class="btn btn-secondary m-auto" id="generate">Generate</button>
                             <label for="sameColor" class="mt-1 ml-2 col-form-label">
                                 <input type="checkbox" id="sameColor" name="sameColor" checked/>
                                 All child colors have same color as parent
                             </label>
+                            <span>(click 3 times to highlight color value)</span>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+           
     </div>
     
     <div class="container" id="countColors">

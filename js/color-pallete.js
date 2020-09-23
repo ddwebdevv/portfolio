@@ -10,22 +10,22 @@ let array = [];
 function generate() {
     mPart.innerHTML = '';
     inputArr = [];
-    labelHexArr = [];
-    labelRgbArr = [];
+    // labelHexArr = [];
+    // labelRgbArr = [];
     // array = [];
-    console.log(mPart);
-    console.log(shSelect.value);
-    console.log(colSelect.value);
+    // console.log(mPart);
+    // console.log(shSelect.value);
+    // console.log(colSelect.value);
     let htmlP = '';
     for (let i = 0; i < colSelect.value; i++) {
         htmlP += '<div class="row justify-content-center">';
         // mPart.innerHTML = mPart.innerHTML.slice(0, -7);
         // console.log(mPart.innerHTML);
         for (let k = 0; k < shSelect.value; k++) {
-            htmlP += `<div class="col mx-2 p-2">                
-            <div class="round1 input-group mx-auto"><input type="color" class="round invis form-control color${i}" value="#00ff00" data-colorn="${i}" data-indexn="${k}"></div>
-            <label for="" class="mt-1 col-form-label data-colorn="${i} hex" data-indexn="${k}">#0000ff</label>
-            <label for="" class="mt-1 col-form-label data-colorn="${i} rgb" data-indexn="${k}">rgb(0, 0, 255)</label>
+            htmlP += `<div class="col col-sm-2 mx-xs-2 p-2">                
+            <div class="round1 input-group mx-auto"><input type="color" class="round invis form-control color${i}" value="#0000ff" data-colorn="${i}" data-indexn="${k}"></div>
+            <label  class="mt-1 col-form-label clab">#0000ff</label>
+            <label  class="mt-1 col-form-label clab">rgb(0, 0, 255)</label>
         </div>`; 
         
             //  ${i}shadeOf${k}Color
@@ -36,9 +36,10 @@ function generate() {
     }
     mPart.innerHTML = htmlP;    
     inputArr = document.querySelectorAll('input[type=color]');
-    labelHexArr = document.querySelectorAll('label[class=hex]');
-    labelRgbArr = document.querySelectorAll('label[class=rgb]'); 
-    array = Array.from(inputArr);   
+    array = Array.from(inputArr); 
+    // labelHexArr = document.querySelectorAll('label[class=hex]');
+    // labelRgbArr = document.querySelectorAll('label[class=rgb]'); 
+      
     // inputArr.forEach(input => { 
     //     input.addEventListener('click', colorizeInit);
     // });
@@ -51,14 +52,20 @@ function colorizeInit(){
     if (document.querySelector('#sameColor').checked) {
         console.log("checked");
         inputArr.forEach(input => { 
-            input.addEventListener('change', colorizeAll);
-            input.addEventListener('input', colorizeAll);
+            input.removeEventListener('change', colorizeSingle);
+            input.removeEventListener('input', colorizeSingle);
+            input.addEventListener('change', colorizeAllchild);
+            input.addEventListener('input', colorizeAllchild);
+            // input.value = input.parentNode.style.backgroundColor;
         });
     } else {
         console.log('not checked');
         inputArr.forEach(input => { 
+            input.removeEventListener('change', colorizeAllchild);
+            input.removeEventListener('input', colorizeAllchild);
             input.addEventListener('change', colorizeSingle);
             input.addEventListener('input', colorizeSingle);
+            // input.value = input.parentNode.style.backgroundColor;
         });
     }
 }
@@ -80,7 +87,7 @@ function colorize(target, color) {
     // console.log(target.dataset);
     // console.log(target.parentNode.style.backgroundColor);
     // console.log(target.parentNode.nextElementSibling.nextElementSibling);
-    
+    target.value = color;
     target.parentNode.style.backgroundColor = color;
     target.parentNode.nextElementSibling.innerHTML = color;
     target.parentNode.nextElementSibling.nextElementSibling.innerHTML = target.parentNode.style.backgroundColor;
@@ -89,7 +96,7 @@ function colorize(target, color) {
     // console.log(target.parentNode.nextElementSibling.nextElementSibling.innerHTML);
 }
 
-function colorizeAll(e){
+function colorizeAllchild(e){
     console.log(e.target.dataset.colorn);
     console.log(e.target.dataset.indexn);
     console.log(inputArr[3].dataset.colorn);
@@ -114,8 +121,7 @@ function colorizeAll(e){
 // inputArr[1].attributes.value - current color
 // inputArr[1].style.backgroundColor = '#ff0000';
 // numCol, numShad
-$(function(){
-   
-});
+
+
 document.querySelector('#sameColor').addEventListener('change', colorizeInit);
 document.querySelector('#generate').addEventListener('click', generate);
