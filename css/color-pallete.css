@@ -9,11 +9,51 @@
     height: 6rem;
 }
 
+.round1 {
+    border-radius: 300px;
+    border: none;
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--base);
+    text-align: center;
+}
+
 .row {
     margin: 0.5rem;
 }
+.col {
+    border: 1px solid green;
+}
 
-input[type=text] {
-    width: 6rem;
+label {
+    display: block;
+    /* width: 6rem; */
     text-align: center;
+}
+.invis{
+    border: 1px solid red;
+    opacity: 0.001;
+}
+
+@media screen and (max-width: 760px) {
+    input[type=text] {
+        display: block;
+        height: 1.5rem;
+        width: 5rem;
+        font-size: x-small;
+        text-align: center;
+    }
+    .round1 {
+        border-radius: 300px;
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--base);
+    }
+    .round {
+    
+        border: none;
+        width: 3rem;
+        height: 3rem;
+    }
 }
