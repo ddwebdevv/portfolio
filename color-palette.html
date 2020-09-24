@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Template</title>
+	<title>Color Palette</title>
 	<!-- change icon -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/color-pallete.css">
+    <link rel="stylesheet" href="css/color-palette.css">
 </head>
 <body>
     <div class="container mt-sm-3 " >
@@ -37,13 +37,14 @@
                     <div class="row form-group d-flex">
                         <div class="col  text-center">
                             <button type="button" class="btn btn-secondary m-auto" id="generate">Generate</button>
+                            <button type="button" class="btn btn-outline-secondary m-auto" id="goback">Go back home</button>
                             <label for="sameColorChild" class="mt-1 ml-2 col-form-label">
                                 <input type="checkbox" id="sameColorChild" name="sameColorChild" checked/>
-                                All child colors have same color as parent
+                                Change all colors to the right
                             </label>
                             <label for="sameColorParent" class="mt-1 ml-2 col-form-label">
                                 <input type="checkbox" id="sameColorParent" name="sameColorParent" checked/>
-                                All parent colors have same color as child
+                                Change all colors to the left
                             </label>
                             <span>(click 3 times to highlight color value)</span>
                         </div>
@@ -60,6 +61,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/color-pallete.js"></script>
+    <script src="js/color-palette.js"></script>
 </body>
 </html>

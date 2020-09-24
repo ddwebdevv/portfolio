@@ -3,14 +3,15 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQouteBtn = document.getElementById('newQuote');
+const goBackBtn = document.getElementById('goback');
 const loader = document.getElementById('loader');
 
-function loading() {
+function loadingSpin() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
-
-function complete() {
+console.log(document.getElementById('eng').checked)
+function completeSpin() {
     if (!loader.hidden) {
         loader.hidden = true;
         quoteContainer.hidden = false;
@@ -18,9 +19,15 @@ function complete() {
 }
 //get API
 async function getQuote() {
-    loading();
+    loadingSpin();
     const proxyUrl = 'https://morning-lowlands-54359.herokuapp.com/'
-    const apiUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json"; 
+    let apiUrl = '';
+    if (document.getElementById('eng').checked) {
+         apiUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";         
+    }else {
+         apiUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=json"; 
+    }
+    // const apiUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=ru&format=json"; 
     try {
         const response = await fetch(proxyUrl + apiUrl);
         const data = await response.json();
@@ -38,7 +45,7 @@ async function getQuote() {
         }
         quoteText.innerText = data.quoteText;
 
-        complete();
+        completeSpin();
     } catch (error) {
         getQuote();
         
@@ -52,8 +59,11 @@ function tweetQuote() {
     window.open(twitterUrl, '_blank');
 }
 
+function returnHome() {
+    window.location = 'home.html';
+}
+
 newQouteBtn.addEventListener('click', getQuote);
 twitterBtn.addEventListener('click', tweetQuote);
-
-
+goBackBtn.addEventListener('click', returnHome)
 getQuote();
