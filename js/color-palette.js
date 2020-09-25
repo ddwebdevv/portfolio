@@ -84,10 +84,10 @@ function colorizeSingle(e){
 
 //main function for changin colors of input color, div, and text in labels
 function colorize(target, color) {
-    target.value = color;
+    target.value = color;//need to change color of other inputs color
     target.parentNode.style.backgroundColor = color;
-    target.parentNode.nextElementSibling.innerHTML = color;
-    target.parentNode.nextElementSibling.nextElementSibling.innerHTML = target.parentNode.style.backgroundColor;
+    target.parentNode.nextElementSibling.innerText = color;
+    target.parentNode.nextElementSibling.nextElementSibling.innerText = target.parentNode.style.backgroundColor;
   
 }
 

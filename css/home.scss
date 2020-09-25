@@ -1,3 +1,42 @@
-h2 {
-	border-color: blue;
+$color-main: rgb(14, 14, 29);
+$color-background:#1c1e33;
+$color-shadow: #a6a8b4;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-background;
+  color: whitesmoke;
+} 
+h2:hover {
+  filter: brightness(110%);
+  transform: scale(1.05);
+}
+
+footer {
+  background-image: linear-gradient($color-background,$color-main);
+}
+
+
+.jumbotron {
+  padding:  1rem auto;
+  background-color: blue;
+  background-image: linear-gradient(to right, $color-main, rgb(82, 94, 109),$color-main);
+}
+
+
+.imgres:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 1rem $color-shadow);
+}
+
+.row {
+  margin-top: 2rem;
+  margin-bottom: 2rem;  
+}
+
+
+.port {
+  max-height: 75vh;
 }

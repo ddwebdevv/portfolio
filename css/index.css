@@ -2,7 +2,7 @@ body, html {
   width: 100%;
   height: 100%;
   /*font-family: ;*/
-  background: url(../img/home.jpg);
+  background: url(../img/header.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,8 +12,12 @@ h2 {
   font-size: 4rem;
   color: #e2dbdb; }
 
+h3 {
+  font-size: 2rem;
+  color: #e2dbdb; }
+
 hr {
-  border-color: #f05f44;
+  border-color: #dbd2d0;
   border-width: 3px;
   max-width: 400px; }
 
@@ -25,25 +29,21 @@ hr {
   border-radius: 300px;
   text-transform: uppercase; }
 
-.btn-primary {
-  background-color: #f05f44;
-  border-color: #f05f44;
+.btn-light {
+  background-color: #dbd2d0;
+  border-color: #dbd2d0;
   box-shadow: 0 0.25rem #3f18118e; }
 
-.btn-primary:hover {
-  background-color: #f05f44;
-  border-color: #f05f44;
+.btn-light:hover {
+  background-color: #dbd2d0;
+  border-color: #dbd2d0;
   filter: brightness(110%); }
 
-.btn-primary:active {
+.btn-light:active {
   transform: translate(0, 0.25rem);
   box-shadow: 0 0.1rem #3f18118e;
-  background-color: #f05f44;
-  border-color: #f05f44; }
-
-.btn-primary:active {
-  background-color: #f05f44;
-  border-color: #f05f44; }
+  background-color: #dbd2d0;
+  border-color: #dbd2d0; }
 
 .btn-xl {
   padding: 1rem 2rem; }
