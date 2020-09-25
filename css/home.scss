@@ -15,9 +15,14 @@ header h1{
   font-weight: 700;
   font-size: 6rem;
   letter-spacing: 2px;
-  color: rgb(221, 219, 236);
+  color: rgb(221, 219, 236);  
 }
-h2:hover {
+header h1:hover{
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 700;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  color: rgb(221, 219, 236);  
   filter: brightness(110%);
   transform: scale(1.05);
 }
