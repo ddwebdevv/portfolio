@@ -3,15 +3,15 @@
 <head>
 	 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<title>Dmitry Dergunov</title>
     <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-        <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css" />
     <!-- endbuild -->
-    	<title>DDstories</title>
+    
 </head>
 <body>
 	 
@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2>Dmitry Dergunov</h2>
+                    <h1>Dmitry Dergunov</h1>
                 </div>
             </div>
         </div>
@@ -28,88 +28,84 @@
     </header>    
 
     <div class="container my-1 ">
-	     <div class="row">
-            <div class="col-sm-6 text-right">                 
-                <img class="img-fluid port p-0" src="img/photome.JPG" alt="" />
+        <div class="row row-content">
+            <div class="col-md-4 text-right align-self-center">                 
+                <img class="img-fluid  p-0" src="img/photome.JPG" alt="" />
             </div>
-            <div class="col-sm-6 align-self-center ">
-                <h3>Your text</h3>
-                <p>Hello.</p>
+            <div class="col-md-8 align-self-center ">
+                <h3>Hello!</h3>
                 <p>Welcome to my playground! Here I’ll post my work and interesting exercises I’ve been working on.</p>
-                <p> I moved from Russia years ago. And even I had some background in coding, I didn’t pursue this career. Because I was exited about new environment, new people, new culture. So I put my career on hold while I was getting new experiences, visiting places, learning different industries.</p>
-                  <p>I enjoy learning new things. I always saying “The World is so big and beautiful”. Meaning there are some many things to try, to see, to feel and to learn about around us! And it is always hard to choose what I’ll be learning next. Because I want to know everything! Which is not going to happened. But at least I can try to learn as much as possible.
-                    And all experiences in my life helped me to look at things at different angles. I can use my knowledge from different fields in my current tasks. I can think out the box. One of my strongest sides is consistency. I always working on the same high level (that is what my employers saying). And of course problem solving. That is why I enjoy coding. When you constantly pursuing some goals, trying to reach them in different ways, and that feeling when you finally get your targets! Satisfaction! 
-                    I’m looking forward to get more experience in Web/Software Development field and learning more  about different industries! </p>
+                <p> I moved from Russia years ago. And even I had some background in coding, I didn’t pursue this career. Because I was exited about new environment, new people, new culture. So I put my career on hold while I was getting new experiences, visiting places, learning different things.</p>
+                  <p>I enjoy learning new things. I always saying “The World is so big and beautiful”. Meaning there are some many things to try, to see, to feel and to learn about around us! And it is always hard to choose what I’ll be learning next. Because I want to know everything! Which is not going to happened. But at least I can try to learn as much as possible.</p>
+                  <p>  I can look at things at different angles. I can use my knowledge from different fields to achieve my current goals. I can think out the box. One of my strongest sides is consistency. I always working on the same high level (that is what my employers saying). And of course problem solving. That is why I enjoy coding. When you constantly pursuing some goals, trying to reach them in different ways, and that feeling when you finally get it right! Satisfaction! </p>
+                   <p> I’m looking forward to get more experience in Web/Software Development field and learning more  about different industries! </p>
                 
             </div>
         </div>
-		
-		<div class="row">
-            <div class="col-sm-6 order-sm-last">                 
-                <img class="img-fluid p-0 imgres" src="img/color-palette-cut.png" alt="" />
+        <div class="row-fluid  mid">
+            <h3 class="text-center my-5 p-5">Here you can see some of my projects/exercises</h3>
+        </div>
+		<div class="row row-content">
+            <div class="col-sm-6 order-sm-last">  
+                <a href="color-palette.html">               
+                    <img class="img-fluid p-0 imgres" src="img/color-palette-cut.png" alt="" />
+                </a>
             </div>
-            <div class="col-sm-6 align-self-center text-right ">
-                <h3 class="">Your text</h3>
-                <p class="">more text more textmore textmore textmore textmore textmore textmore textmore textmore textmore text</p>
-                <a href="#" class="textright">Go somewhere</a>
+            <div class="col-sm-6 align-self-center text-sm-right ">
+                <h3 class="">Color Palette</h3>
+                <p class="">This is my favorite so far. I made it all from scratch. Idea is to choose some colors and then create shades from those main colors.</p>
+                <p>I faced many challenges while was working on JS part. Constantly tried to improve my vision and usability. I really enjoyed coding this one!</p>
+                <a href="color-palette.html" class="textright">Demo</a>
+                <a href="https://github.com/ddwebdevv/color-palette.git" class="btn btn-social-icon btn-github" target="_blank"><i class="fa fa-github iconwhite"></i></a>
             </div>
         </div>
 
-	    <div class="row">
-            <div class="col-sm-6 text-right">                 
-                <img class="img-fluid imgres p-0" src="img/quote-sample-cut.png" alt="" />
+	    <div class="row row-content">
+            <div class="col-sm-6 text-right">  
+                <a href="quote.html">               
+                    <img class="img-fluid imgres p-0" src="img/quote-sample-cut.png" alt="" />
+                </a>
             </div>
             <div class="col-sm-6 align-self-center ">
-                <h3>Your text</h3>
-                <p class="">more text more textmore textmore textmore textmore textmore textmore textmore textmore textmore text</p>
-                <a href="#">Go somewhere</a>
+                <h3>Quote Generator</h3>
+                <p class="">Fetching quotes with forismatic API using private proxy server on Heroku.</p>
+                <p>You can choose qoutes in english or russian languages. Also you can tweet qoutes.</p>
+                <a href="quote.html">Demo</a>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-sm-6 order-sm-last"> 
+                <a href="matching-game.html">                
+                    <img class="img-fluid p-0 imgres" src="img/matching-game-cut.png" alt="" />
+                </a>
+            </div>
+            <div class="col-sm-6 align-self-center text-sm-right ">
+                <h3 class="">Matching Game</h3>
+                <p class="">One of the first exercises I've made.</p>
+                <p>Loved working with JS!</p>
+                <a href="matching-game.html" class="textright">Demo</a>
             </div>
         </div>
 	</div>
 
     <footer class="py-3">
         <div class="container">
+            <h2 class="text-center">Contact me</h2>
             <div class="row">
-                <div class="col text-center">
-                    <a href="" class="btn btn-social-icon"><i class="fa">linkS1</i></a>
-                    <a href="" class="btn btn-social-icon"><i class="fa">LinkS2</i></a>
+                <div class="col text-center">                    
+                    <a href="https://linkedin.com/in/dmitry-dergunov-5a21161b6" class="btn mx-3 btn-social-icon btn-linkedin"><i class="fa fa-linkedin iconwhite fa-3x"></i></a>
+                    <a href="https://github.com/ddwebdevv" class="btn btn-social-icon btn-github mx-3"><i class="fa fa-github iconwhite fa-3x"></i></a>
+                    <a role="button" class="btn btn-link emailBlock mt-3" href="mailto:dmitrynuc@gmail.com"><i class="fa fa-envelope-o"></i>dergunovdg@gmail.com</a>
                 </div>
             </div>
         </div>
-    </footer>
-     <!-- <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col col-sm-3 offset-2">
-                    <h5></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 2</a></li>
-                        <li><a href="">Link 3</a></li>
-                        <li><a href="">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5></h5>
-                    <a href="" class="btn btn-social-icon"><i class="fa">linkS1</i></a>
-                    <a href="" class="btn btn-social-icon"><i class="fa">LinkS2</i></a>
-                    <a href="" class="btn btn-social-icon"><i class="fa">LinkS3</i></a>
-                    <a href="" class="btn btn-social-icon"><i class="fa">LinkS4</i></a>
-                </div>
-                <div class="col-sm-4 text-center">
-                    <a role="button" class="btn btn-link" href="tel:"><i class="fa fa-phone"></i>+1234</a><br>
-                    <a role="button" class="btn btn-link" href="mailto:"><i class="fa fa-envelope-o"></i>email</a>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+    </footer>    
+
     <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbuild -->
-    
-	
-
 </body>
 </html>

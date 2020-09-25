@@ -36,6 +36,10 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "copyfiles": "^2.2.0",
+    "imagemin-cli": "^5.1.0",
+    "node-sass": "^4.14.1",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
   }
 }

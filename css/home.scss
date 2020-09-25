@@ -1,5 +1,5 @@
 $color-main: rgb(14, 14, 29);
-$color-background:#1c1e33;
+$color-background:#242641;
 $color-shadow: #a6a8b4;
 
 html,
@@ -8,7 +8,15 @@ body {
   padding: 0;
   background-color: $color-background;
   color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
 } 
+header h1{
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: 700;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  color: rgb(221, 219, 236);
+}
 h2:hover {
   filter: brightness(110%);
   transform: scale(1.05);
@@ -18,6 +26,9 @@ footer {
   background-image: linear-gradient($color-background,$color-main);
 }
 
+.mid {
+  background-image: linear-gradient( $color-background, $color-main,  $color-background);
+}
 
 .jumbotron {
   padding:  1rem auto;
@@ -33,10 +44,18 @@ footer {
 
 .row {
   margin-top: 2rem;
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
 }
 
+.row-content {     
+  padding-bottom: 2rem;
+  border-bottom: 1px solid gray;
+}
 
-.port {
-  max-height: 75vh;
+.iconwhite {
+  color: whitesmoke;
+}
+
+.emailBlock {
+  display: block;
 }
