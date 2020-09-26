@@ -46,7 +46,11 @@ footer {
   border-bottom: 1px solid gray; }
 
 .iconwhite {
-  color: whitesmoke; }
+  color: whitesmoke;
+  transform: scale(1.2); }
+
+.btn-social-icon {
+  transform: scale(1.14); }
 
 .emailBlock {
   display: block; }
